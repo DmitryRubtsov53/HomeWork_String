@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Домашнее задание Урока Строки ****************************************************");
@@ -47,6 +48,19 @@ public class Main {
         String Name1 = fullName.substring(entry1, entry2);    System.out.println("Имя сотрудника - " + fistName);
         String Name2 = fullName.substring(entry2, entry3);    System.out.println("Отчество сотрудника - " + middleName);
 
+        System.out.println();
+        System.out.println("Задача 6. Превести первые буквы ФИО сотрудника в верхний регистр.");
+
+        String fio = "иванов иван иванович";
+        char [] fioArray = fio.toCharArray();
+
+        fioArray[0] = Character.toUpperCase(fioArray[0]);
+
+        for (int i = 1; i < fioArray.length; i++) {
+            if (fioArray[i] == ' ')
+                fioArray[i+1] = Character.toUpperCase(fioArray[i+1]);
+        }
+        System.out.println(fioArray);
 
     }
 }

@@ -29,7 +29,7 @@ public class Main {
         System.out.println("Задачи Повышенной сложности Урока Строки");
 
         System.out.println();
-        System.out.println("Задача 5. Вариант 1. Разделить строку ФИО сотрудника и напечатать части");
+        System.out.println("Задача ПС 5. Вариант 1. Разделить строку ФИО сотрудника и напечатать части");
 
         String[] names = fullName.split(" ");
 
@@ -38,18 +38,18 @@ public class Main {
         String mName = names[2];    System.out.println("Отчество сотрудника - " + mName);
 
         System.out.println();
-        System.out.println("Задача 5. Вариант 2. Разделить строку ФИО сотрудника и напечатать части");
+        System.out.println("Задача ПС 5. Вариант 2. Разделить строку ФИО сотрудника и напечатать части");
 
         int entry1 = fullName.indexOf(' ');
         int entry2 = fullName.lastIndexOf(' ');
-        int entry3 = fullName.length() - 1;
+        int exit = fullName.length() - 1;
 
         String Name0 = fullName.substring(0, entry1);         System.out.println("Фамилия сотрудника - " + lastName);
         String Name1 = fullName.substring(entry1, entry2);    System.out.println("Имя сотрудника - " + fistName);
-        String Name2 = fullName.substring(entry2, entry3);    System.out.println("Отчество сотрудника - " + middleName);
+        String Name2 = fullName.substring(entry2, exit);    System.out.println("Отчество сотрудника - " + middleName);
 
         System.out.println();
-        System.out.println("Задача 6. Превести первые буквы ФИО сотрудника в верхний регистр.");
+        System.out.println("Задача ПС 6. Превести первые буквы ФИО сотрудника в верхний регистр.");
 
         String fio = "иванов иван иванович";
         char [] fioArray = fio.toCharArray();
@@ -61,6 +61,21 @@ public class Main {
                 fioArray[i+1] = Character.toUpperCase(fioArray[i+1]);
         }
         System.out.println(fioArray);
+
+        System.out.println();
+        System.out.println("Задача ПС 8. Найти и распечатать дублирующиеся в строке буквы");
+
+        String alfa = "aabccddefgghiijjkk";
+        char [] dubl = alfa.toCharArray();
+
+        for (int i = 0; i < dubl.length; i++) {
+            for (int j = i + 1; j < dubl.length; j++) {
+                if (dubl[i] == dubl[j]) {
+                    System.out.print(dubl[i]);
+                }
+            }
+        }
+
 
     }
 }
